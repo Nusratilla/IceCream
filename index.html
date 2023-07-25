@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Responsive juice website</title>
+  </head>
+  <body>
+    <!-- Responsive Juice Website Design Using HTML CSS & JavaScript  -->
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav-logo">Juicy<span>Ice</span>Cream</a>
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#" class="nav-link active-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Contact</a>
+            </li>
+          </ul>
+          <div class="nav-close" id="nav-close">
+            <i class="fa-sharp fa-solid fa-xmark"></i>
+          </div>
+          <img src="img/ice-cream/menu-IC.png" alt="" class="nav-img" />
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home">
+        <div class="home-shape-small"></div>
+        <div class="home-shape-big"></div>
+        <img src="img/shape-bg.png" alt="" class="home-shape-bg" />
+        <div class="home-container container">
+          <div class="home-data">
+            <h1 class="home-title">
+              Get Fresh <span>Juicy <br />IceCream</span> Everyday
+            </h1>
+            <p class="home-description">
+              Starts at $22 per kg, <br />
+              get those benefits and more.
+            </p>
+            <a href="#" class="home-button">Details</a>
+          </div>
+          <div class="home-images">
+            <img src="img/liquid-fruit.png" alt="" class="home-liquid" />
+            <img src="img/milk.png" alt="" class="home-milk" />
+            <div class="home-juice-animate">
+              <img src="img/IceCream.png" alt="" class="home-juice" />
+            </div>
+            <img src="img/ice-cream/img1.png" alt="" class="home-apple1" />
+            <img src="img/ice-cream/img2.png" alt="" class="home-apple2" />
+            <div class="home-leafs">
+              <img src="img/ice-cream/oq.png" alt="" class="home-leaf" />
+              <img src="img/ice-cream/oq-qizil.png" alt="" class="home-leaf" />
+              <img src="img/ice-cream/yashil.png" alt="" class="home-leaf" />
+              <img src="img/ice-cream/sariq.png" alt="" class="home-leaf" />
+              <img src="img/ice-cream/jigarrang.png" alt="" class="home-leaf" />
+              <img src="img/ice-cream/qizil.png" alt="" class="home-leaf" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--=============== About ===============-->
+      <section class="about">
+        <div class="about-main">
+          <h2 class="about-title">About</h2>
+          <div class="about-wrapper"></div>
+        </div>
+      </section>
+    </main>
+
+    <!--=============== GSAP ===============-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!--=============== MAIN JS ===============-->
+    <script src="js/script.js"></script>
+  </body>
+</html>
