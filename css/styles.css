@@ -6,6 +6,22 @@
 font-family: 'Roboto', sans-serif; */
 
 /*=============== VARIABLES CSS ===============*/
+::-webkit-scrollbar {
+  background-color: var(--primary-color);
+  width: 0.6rem;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    -75deg,
+    var(--first-color) 33%,
+    var(--text-color) 36%,
+    var(--first-color) 39%,
+    var(--text-color) 90%,
+    var(--first-color) 100%
+  );
+  border-radius: 12rem;
+  border-bottom: 2px solid var(--title-color);
+}
 :root {
   --header-height: 3.5rem;
 
