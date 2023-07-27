@@ -1,4 +1,4 @@
-/*=============== MENU ===============*/
+// ---------------Menu---------------
 const navMenu = document.querySelector("#nav-menu"),
   navToggle = document.querySelector("#nav-toggle"),
   navClose = document.querySelector("#nav-close"),
@@ -20,8 +20,7 @@ const typed = new Typed(".name-input", {
   backSpeed: 80,
   loop: true,
 });
-
-/*=============== GSAP ANIMATION ===============*/
+// ---------------GSAP ANIMATION---------------
 TweenLite.from(".home-title", 1, {
   delay: 0.2,
   opacity: 0,
@@ -105,4 +104,41 @@ TweenLite.from(".home-leaf:nth-child(1)", 2, {
   opacity: 0,
   y: -800,
   ease: Expo.easeInOut,
+});
+// sale-slader
+var swiper = new Swiper(".slide-content", {
+  slidesPerView: 4,
+  spaceBetween: 15,
+  loop: true,
+  centerSlide: "true",
+  fade: "true",
+  grabCursor: "true",
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    500: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    994: {
+      slidesPerView: 4,
+    },
+    1250: {
+      slidesPerView: 5,
+    },
+    1440: {
+      slidesPerView: 6,
+    },
+  },
 });

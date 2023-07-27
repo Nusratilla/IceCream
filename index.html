@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="img/fav.png" type="image/x-icon" />
 
-    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="css/cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -18,7 +21,7 @@
   </head>
   <body>
     <!-- Responsive Juice Website Design Using HTML CSS & JavaScript  -->
-    <!--==================== HEADER ====================-->
+
     <header class="header" id="header">
       <nav class="nav container">
         <a href="#" class="nav-logo">Juicy<span>Ice</span>Cream</a>
@@ -86,21 +89,93 @@
           </div>
         </div>
       </section>
-      <!--=============== About ===============-->
-      <section class="discount">
-        <div class="discount-main">
-          <h2 class="discount-title">best discounts for today</h2>
-          <div class="discount-wrapper container">
-            <div class="discount-cards"></div>
+      <!-----------------Sale----------------->
+      <section class="sale--section container">
+        <h2 class="sale-title">
+          Range of Products Currently Available For Sale.
+        </h2>
+        <div class="slide-container swiper">
+          <div class="slide-content">
+            <div class="product-list swiper-wrapper">
+              <div class="product-item swiper-slide">
+                <img src="image/ice-cream-main.png" />
+                <div class="product-title">PRODUCT NAME 1</div>
+                <div class="product-price">$11.99</div>
+                <button>Add To Card</button>
+              </div>
+              <div class="product-item swiper-slide">
+                <img src="image/ice-cream-main.png" />
+                <div class="product-title">PRODUCT NAME 1</div>
+                <div class="product-price">$11.99</div>
+                <button>Add To Card</button>
+              </div>
+              <div class="product-item swiper-slide">
+                <img src="image/ice-cream-main.png" />
+                <div class="product-title">PRODUCT NAME 1</div>
+                <div class="product-price">$11.99</div>
+                <button>Add To Card</button>
+              </div>
+              <div class="product-item swiper-slide">
+                <img src="image/ice-cream-main.png" />
+                <div class="product-title">PRODUCT NAME 1</div>
+                <div class="product-price">$11.99</div>
+                <button>Add To Card</button>
+              </div>
+              <div class="product-item swiper-slide">
+                <img src="image/ice-cream-main.png" />
+                <div class="product-title">PRODUCT NAME 1</div>
+                <div class="product-price">$11.99</div>
+                <button>Add To Card</button>
+              </div>
+              <div class="product-item swiper-slide">
+                <img src="image/ice-cream-main.png" />
+                <div class="product-title">PRODUCT NAME 1</div>
+                <div class="product-price">$11.99</div>
+                <button>Add To Card</button>
+              </div>
+              <div class="product-item swiper-slide">
+                <img src="image/ice-cream-main.png" />
+                <div class="product-title">PRODUCT NAME 1</div>
+                <div class="product-price">$11.99</div>
+                <button>Add To Card</button>
+              </div>
+              <div class="product-item swiper-slide">
+                <img src="image/ice-cream-main.png" />
+                <div class="product-title">PRODUCT NAME 1</div>
+                <div class="product-price">$11.99</div>
+                <button>Add To Card</button>
+              </div>
+              <div class="product-item swiper-slide">
+                <img src="image/ice-cream-main.png" />
+                <div class="product-title">PRODUCT NAME 1</div>
+                <div class="product-price">$11.99</div>
+                <button>Add To Card</button>
+              </div>
+              <div class="product-item swiper-slide">
+                <img src="image/ice-cream-main.png" />
+                <div class="product-title">PRODUCT NAME 1</div>
+                <div class="product-price">$11.99</div>
+                <button>Add To Card</button>
+              </div>
+              <div class="product-item swiper-slide">
+                <img src="image/ice-cream-main.png" />
+                <div class="product-title">PRODUCT NAME 1</div>
+                <div class="product-price">$11.99</div>
+                <button>Add To Card</button>
+              </div>
+            </div>
           </div>
+          <div class="swiper-button-next swiper-nav-btn"></div>
+          <div class="swiper-button-prev swiper-nav-btn"></div>
+          <div class="swiper-pagination"></div>
         </div>
       </section>
     </main>
 
-    <!--=============== GSAP ===============-->
+    <!-----------------GSAP/Typrd----------------->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <!--=============== MAIN JS ===============-->
+    <script src="js/cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

@@ -27,8 +27,8 @@ font-family: 'Roboto', sans-serif; */
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(2, 100%, 50%);
-  --first-color-alt: hsl(2, 89%, 53%);
+  --first-color: rgb(233, 0, 0);
+  --first-color-alt: rgb(255, 128, 128);
   --title-color: hsl(233, 20%, 15%);
   --text-color: hsl(233, 4%, 35%);
   --body-color: hsl(2, 100%, 97%);
@@ -39,6 +39,7 @@ font-family: 'Roboto', sans-serif; */
   --second-font: "Lemon", cursive;
   --biggest-font-size: 2.25rem;
   --normal-font-size: 0.9rem;
+  --h2-font: 2rem;
 }
 
 /* Responsive typography */
@@ -78,7 +79,7 @@ img {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 1024px;
+  max-width: 1424px;
   margin-right: 1.5rem;
   margin-left: 1.5rem;
 }
@@ -452,12 +453,97 @@ img {
     right: -14rem;
   }
 }
-@media screen and (min-width: 1084px) {
+@media screen and (min-width: 1100px) {
+  .home-container {
+    column-gap: 5rem;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .home-container {
+    column-gap: 10rem;
+  }
+}
+@media screen and (min-width: 1460px) {
   .container {
     margin-left: auto;
     margin-right: auto;
   }
   .home-container {
-    column-gap: 5rem;
+    column-gap: 15rem;
   }
+}
+/* Sale-slider  */
+.sale--section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sale-title {
+  font-size: var(--h2-font);
+  font-family: var(--second-font);
+  color: var(--title-color);
+  padding: 3rem 0;
+}
+.slide-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  /* background-color: #e0dddd; */
+  padding: 2rem 0;
+}
+.slide-content {
+  margin: 0 50px;
+  overflow: hidden;
+}
+.swiper-nav-btn {
+  color: var(--first-color);
+  opacity: 0.5;
+  background-color: #fffdfd;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  padding: 2rem 1rem;
+}
+.swiper-nav-btn:hover {
+  opacity: 0.9;
+}
+.swiper-pagination-bullet {
+  background-color: rgb(88, 88, 88);
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--first-color);
+  transform: scale(1.1);
+  width: 1.4rem;
+  border-radius: 0.5rem;
+}
+@media (max-width: 600px) {
+  .swiper-nav-btn {
+    display: none;
+  }
+}
+.product-list .product-item {
+  width: 250px;
+  text-align: center;
+  background-color: var(--first-color-alt);
+  border-radius: 0.5rem;
+  padding: 20px;
+  margin: auto;
+  letter-spacing: 1px;
+}
+.product-list .product-item > img {
+  width: 80px;
+  height: 100px;
+}
+.product-list .product-item .product-title {
+  font-weight: 600;
+}
+.product-list .product-item .product-price {
+  margin: 10px;
+}
+.product-list .product-item > button {
+  background-color: #1c1f25;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
 }
