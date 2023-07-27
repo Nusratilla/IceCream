@@ -1,4 +1,4 @@
-/*=============== SHOW MENU ===============*/
+/*=============== MENU ===============*/
 const navMenu = document.querySelector("#nav-menu"),
   navToggle = document.querySelector("#nav-toggle"),
   navClose = document.querySelector("#nav-close"),
@@ -8,24 +8,18 @@ navToggle.addEventListener("click", () => {
   navMenu.classList.add("show-menu");
 });
 
-// navClose.addEventListener("click", () => {
-//   navMenu.classList.remove("show-menu");
-// });
-
-// navLink.forEach((e) => {
-//   e.addEventListener("click", () => {
-//     navMenu.classList.remove("show-menu");
-//   });
-//   navMenu.classList.remove("show-menu");
-// });
-
-/*=============== 2 option ===============*/
-
 function linkAction() {
   navMenu.classList.remove("show-menu");
 }
 navLink.forEach((l) => l.addEventListener("click", linkAction));
 navClose.addEventListener("click", linkAction);
+// ---------------typed animation---------------
+const typed = new Typed(".name-input", {
+  strings: ["Ice Cream"],
+  typeSpeed: 125,
+  backSpeed: 80,
+  loop: true,
+});
 
 /*=============== GSAP ANIMATION ===============*/
 TweenLite.from(".home-title", 1, {

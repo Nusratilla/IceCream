@@ -38,7 +38,7 @@ font-family: 'Roboto', sans-serif; */
   --body-font: "Roboto", sans-serif;
   --second-font: "Lemon", cursive;
   --biggest-font-size: 2.25rem;
-  --normal-font-size: 0.938rem;
+  --normal-font-size: 0.9rem;
 }
 
 /* Responsive typography */
@@ -171,7 +171,7 @@ img {
 }
 .home-container {
   display: grid;
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 8rem;
   row-gap: 1rem;
 }
@@ -182,16 +182,16 @@ img {
   margin-bottom: 0.75rem;
 }
 .home-title span {
-  display: block;
   color: var(--first-color);
 }
 .home-description,
 .home-button {
   font-weight: 700;
+  font-size: 1.5rem;
 }
 .home-description {
   color: var(--title-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--normal-font-size);
 }
 .home-button {
   display: inline-block;
@@ -254,8 +254,8 @@ img {
 }
 /* Move sheets into position */
 .home-leaf:nth-child(1) {
-  top: -7rem;
-  right: 3rem;
+  top: -5rem;
+  right: 1rem;
 }
 .home-leaf:nth-child(2) {
   top: 1.5rem;
@@ -278,8 +278,8 @@ img {
   transform: rotate(-30deg);
 }
 .home-leaf:nth-child(6) {
-  bottom: -5rem;
-  left: 3rem;
+  bottom: -1rem;
+  left: 0;
 }
 .home-shape-small,
 .home-shape-big {
@@ -315,7 +315,7 @@ img {
     transform: translateY(0) rotate(15deg);
   }
   50% {
-    transform: translateY(-1.5rem) rotate(15deg);
+    transform: translateY(-1.5rem) rotate(16deg);
   }
   100% {
     transform: translateY(0) rotate(15deg);
@@ -373,9 +373,15 @@ img {
 }
 /* For large devices */
 @media screen and (min-width: 1024px) {
+  .home-container {
+    column-gap: 0.5rem;
+  }
   .home-images {
     width: 530px;
     height: 590px;
+  }
+  .home-data {
+    width: 400px;
   }
   .home-liquid {
     width: 530px;
@@ -446,9 +452,12 @@ img {
     right: -14rem;
   }
 }
-@media screen and (min-width: 1048px) {
+@media screen and (min-width: 1084px) {
   .container {
     margin-left: auto;
     margin-right: auto;
+  }
+  .home-container {
+    column-gap: 5rem;
   }
 }
