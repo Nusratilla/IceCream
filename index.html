@@ -4,19 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="img/fav.png" type="image/x-icon" />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/swiper@10.0.4/swiper-bundle.min.css"
-      rel="stylesheet"
-    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-
-    <!--=============== CSS ===============-->
     <link rel="stylesheet" href="css/styles.css" />
-
     <title>Responsive juice website</title>
   </head>
   <body>
@@ -43,6 +35,10 @@
           </div>
           <img src="img/ice-cream/menu-IC.png" alt="" class="nav-img" />
         </div>
+        <div class="shopping">
+          <img src="img/shopping.svg" />
+          <span class="quantity">0</span>
+        </div>
         <div class="nav-toggle" id="nav-toggle">
           <i class="fa-solid fa-bars"></i>
         </div>
@@ -54,7 +50,7 @@
       <section class="home">
         <div class="home-shape-small"></div>
         <div class="home-shape-big"></div>
-        <img src="img/shape-bg.png" alt="" class="home-shape-bg" />
+        <img src="img/ice-cream/shape-bg.png" alt="" class="home-shape-bg" />
         <div class="home-container container">
           <div class="home-data">
             <h1 class="home-title">
@@ -68,20 +64,24 @@
             <a href="#" class="home-button">Details</a>
           </div>
           <div class="home-images">
-            <img src="img/liquid-fruit.png" alt="" class="home-liquid" />
-            <img src="img/milk.png" alt="" class="home-milk" />
+            <img
+              src="img/ice-cream/liquid-fruit.png"
+              alt=""
+              class="home-liquid"
+            />
+            <img src="img/ice-cream/milk.png" alt="" class="home-milk" />
             <div class="home-juice-animate">
-              <img src="img/IceCream.png" alt="" class="home-juice" />
+              <img src="img/ice-cream/IceCream.png" alt="" class="home-juice" />
             </div>
             <img src="img/ice-cream/sberry.png" alt="" class="home-apple1" />
             <img src="img/ice-cream/apple.png" alt="" class="home-apple2" />
             <div class="home-leafs">
-              <img src="img/ice-cream/oq.png" alt="" class="home-leaf" />
-              <img src="img/ice-cream/oq-qizil.png" alt="" class="home-leaf" />
-              <img src="img/ice-cream/yashil.png" alt="" class="home-leaf" />
-              <img src="img/ice-cream/sariq.png" alt="" class="home-leaf" />
-              <img src="img/ice-cream/jigarrang.png" alt="" class="home-leaf" />
-              <img src="img/ice-cream/qizil.png" alt="" class="home-leaf" />
+              <img src="img/ice-cream/s-pisbod.png" alt="" class="home-leaf" />
+              <img src="img/ice-cream/s-miyata.png" alt="" class="home-leaf" />
+              <img src="img/ice-cream/s-yeryon.png" alt="" class="home-leaf" />
+              <img src="img/ice-cream/s-qovun.png" alt="" class="home-leaf" />
+              <img src="img/ice-cream/s-pech.png" alt="" class="home-leaf" />
+              <img src="img/ice-cream/s-qlup.png" alt="" class="home-leaf" />
             </div>
           </div>
         </div>
@@ -92,86 +92,25 @@
           Range of <span>Juiicy Ice Creams</span> Currently Available For Sale.
         </h2>
 
-        <div class="slide-container swiper">
-          <div class="slide-content">
-            <div class="product-list swiper-wrapper">
-              <div class="product-item swiper-slide">
-                <div class="product-card-slide">
-                  <img src="img/ice-cream/img2.png" />
-                  <div class="product-title">PRODUCT NAME 1</div>
-                  <div class="product-price">$11.99</div>
-                  <button>Add To Card</button>
-                </div>
+        <div id="shopping-wrapper" class="">
+          <div class="card">
+            <h4>Orders</h4>
+            <ul class="listCard"></ul>
+            <div class="checkOut">
+              <div class="total-price">
+                Total: $<span class="total">0</span>
               </div>
-              <div class="product-item swiper-slide">
-                <div class="product-card-slide">
-                  <img src="img/ice-cream/img2.png" />
-                  <div class="product-title">PRODUCT NAME 1</div>
-                  <div class="product-price">$11.99</div>
-                  <button>Add To Card</button>
-                </div>
-              </div>
-              <div class="product-item swiper-slide">
-                <div class="product-card-slide">
-                  <img src="img/ice-cream/img2.png" />
-                  <div class="product-title">PRODUCT NAME 1</div>
-                  <div class="product-price">$11.99</div>
-                  <button>Add To Card</button>
-                </div>
-              </div>
-              <div class="product-item swiper-slide">
-                <div class="product-card-slide">
-                  <img src="img/ice-cream/img2.png" />
-                  <div class="product-title">PRODUCT NAME 1</div>
-                  <div class="product-price">$11.99</div>
-                  <button>Add To Card</button>
-                </div>
-              </div>
-              <div class="product-item swiper-slide">
-                <div class="product-card-slide">
-                  <img src="img/ice-cream/img2.png" />
-                  <div class="product-title">PRODUCT NAME 1</div>
-                  <div class="product-price">$11.99</div>
-                  <button>Add To Card</button>
-                </div>
-              </div>
-              <div class="product-item swiper-slide">
-                <div class="product-card-slide">
-                  <img src="img/ice-cream/img2.png" />
-                  <div class="product-title">PRODUCT NAME 1</div>
-                  <div class="product-price">$11.99</div>
-                  <button>Add To Card</button>
-                </div>
-              </div>
-              <div class="product-item swiper-slide">
-                <div class="product-card-slide">
-                  <img src="img/ice-cream/img2.png" />
-                  <div class="product-title">PRODUCT NAME 1</div>
-                  <div class="product-price">$11.99</div>
-                  <button>Add To Card</button>
-                </div>
-              </div>
-              <div class="product-item swiper-slide">
-                <div class="product-card-slide">
-                  <img src="img/ice-cream/img2.png" />
-                  <div class="product-title">PRODUCT NAME 1</div>
-                  <div class="product-price">$11.99</div>
-                  <button>Add To Card</button>
-                </div>
-              </div>
-              <div class="product-item swiper-slide">
-                <div class="product-card-slide">
-                  <img src="img/ice-cream/img2.png" />
-                  <div class="product-title">PRODUCT NAME 1</div>
-                  <div class="product-price">$11.99</div>
-                  <button>Add To Card</button>
-                </div>
-              </div>
+              <div class="closeShopping">&#10006;</div>
             </div>
           </div>
-          <div class="swiper-button-next swiper-nav-btn"></div>
-          <div class="swiper-button-prev swiper-nav-btn"></div>
-          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="slide-container">
+          <div class="slide-content">
+            <div class="product-list">
+              <div class="product-item"></div>
+            </div>
+          </div>
         </div>
       </section>
       <!-----------------Products----------------->
@@ -255,7 +194,7 @@
       <section class="footer">
         <div class="footer-shape-small"></div>
         <div class="footer-shape-big"></div>
-        <img src="img/shape-bg.png" alt="" class="footer-shape-bg" />
+        <img src="img/ice-cream/shape-bg.png" alt="" class="footer-shape-bg" />
         <div class="footer-container container">
           <div class="footer-card1">
             <img src="img/Juiicy-logo.png" alt="" />
@@ -287,7 +226,7 @@
     <!-----------------GSAP/Typrd----------------->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="js/cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.js"></script>
+    <script src="js/data.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

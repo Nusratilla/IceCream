@@ -105,35 +105,82 @@ TweenLite.from(".home-leaf:nth-child(1)", 2, {
   y: -800,
   ease: Expo.easeInOut,
 });
-// sale-slader
-var swiper = new Swiper(".slide-content", {
-  slidesPerView: 3,
-  spaceBetween: 15,
-  autoplay: true,
-  loop: true,
-  centerSlide: "true",
-  fade: "true",
-  grabCursor: "true",
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-    },
-    500: {
-      slidesPerView: 2,
-    },
-    768: {
-      slidesPerView: 3,
-    },
-    1024: {
-      slidesPerView: 4,
-    },
-  },
+
+// shop-card
+let openShopping = document.querySelector(".shopping");
+let closeShopping = document.querySelector(".closeShopping");
+let list = document.querySelector(".product-item");
+let listCard = document.querySelector(".listCard");
+let body = document.querySelector("#shopping-wrapper");
+let total = document.querySelector(".total");
+let quantity = document.querySelector(".quantity");
+let card = document.querySelector(".card");
+// Open&close shoppinglist window.
+openShopping.addEventListener("click", () => {
+  card.classList.add("open-sale-card");
 });
+closeShopping.addEventListener("click", () => {
+  card.classList.remove("open-sale-card");
+});
+//  data enter.
+let listCards = [];
+function initApp() {
+  products.forEach((value, key) => {
+    let newDiv = document.createElement("div");
+    newDiv.classList.add("product-card-slide");
+    newDiv.innerHTML = `
+               
+                  <img src="img/sale/${value.image}" />
+                  <div class="product-title">${value.name}</div>
+                  <div class="product-price">$${value.price.toLocaleString()}</div>
+                  <button onclick="addToCard(${key})">Add To Card</button>
+                `;
+    list.appendChild(newDiv);
+  });
+}
+initApp();
+function addToCard(key) {
+  if (listCards[key] == null) {
+    // copy product form list to list card.
+    listCards[key] = JSON.parse(JSON.stringify(products[key]));
+    listCards[key].quantity = 1;
+  }
+  reloadCard();
+}
+function reloadCard() {
+  listCard.innerHTML = "";
+  let count = 0;
+  let totalPrice = 0;
+  listCards.forEach((value, key) => {
+    totalPrice = totalPrice + value.price;
+    count = count + value.quantity;
+    if (value != null) {
+      let newDiv = document.createElement("li");
+      newDiv.innerHTML = `
+                <div><img src="img/sale/${value.image}"/></div>
+                <div>${value.name}</div>
+                <div>${value.price.toLocaleString()}</div>
+                <div>
+                    <button onclick="changeQuantity(${key}, ${
+        value.quantity - 1
+      })">&minus;</button>
+                    <div class="count">${value.quantity}</div>
+                    <button onclick="changeQuantity(${key}, ${
+        value.quantity + 1
+      })">&plus;</button>
+                </div>`;
+      listCard.appendChild(newDiv);
+    }
+  });
+  total.innerText = totalPrice.toLocaleString();
+  quantity.innerText = count;
+}
+function changeQuantity(key, quantity) {
+  if (quantity == 0) {
+    delete listCards[key];
+  } else {
+    listCards[key].quantity = quantity;
+    listCards[key].price = quantity * products[key].price;
+  }
+  reloadCard();
+}
