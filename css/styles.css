@@ -100,7 +100,6 @@ img {
   height: auto;
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1424px;
   margin-right: 1.5rem;
@@ -108,15 +107,17 @@ img {
 }
 
 .main {
-  overflow: hidden; /* For the animations */
+  overflow: hidden;
 }
 
-/*=============== HEADER & NAV ===============*/
+/* -----Menu ----- */
 .header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
+  padding: 0 1rem;
+  backdrop-filter: blur(35px);
   z-index: 999;
 }
 .nav {
@@ -143,7 +144,7 @@ img {
   .nav-menu {
     position: fixed;
     background-color: var(--body-color);
-    top: -100%;
+    top: -600%;
     left: 0;
     box-shadow: 0 8px 24px hsla(22, 100%, 35%, 0.2);
     width: 100%;
@@ -262,15 +263,15 @@ img {
   animation: float-juice 4s ease-in-out infinite;
 }
 .home-apple2 {
-  width: 90px;
-  right: 1rem;
-  bottom: 3.5rem;
+  width: 150px;
+  right: -3rem;
+  bottom: 2rem;
   transform: rotate(30deg);
 }
 .home-apple1 {
-  width: 100px;
-  top: 7rem;
-  left: -1rem;
+  width: 170px;
+  top: 5rem;
+  left: -7rem;
 }
 .home-leaf:nth-child(1),
 .home-leaf:nth-child(6) {
@@ -353,7 +354,7 @@ img {
 }
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .container {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -374,9 +375,15 @@ img {
   .home-juice {
     width: 200px;
   }
-  .home-apple1,
+  .home-apple1 {
+    top: 8rem;
+    left: -3rem;
+    width: 120px;
+  }
   .home-apple2 {
-    width: 70px;
+    bottom: 1rem;
+    right: -1rem;
+    width: 110px;
   }
 }
 /* For medium devices */
@@ -428,14 +435,14 @@ img {
     top: 2rem;
   }
   .home-apple2 {
-    width: 150px;
-    right: 0.5rem;
+    width: 230px;
+    right: -2rem;
     bottom: 1rem;
   }
   .home-apple1 {
-    width: 140px;
+    width: 250px;
     top: 10rem;
-    left: -1rem;
+    left: -7rem;
   }
   .home-leaf:nth-child(1),
   .home-leaf:nth-child(6) {
@@ -511,8 +518,6 @@ img {
   align-items: center;
 }
 .slide-container {
-  position: relative;
-  display: flex;
   width: 100%;
   padding: 2rem 0;
 }
@@ -583,6 +588,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem 0;
 }
 .product-cards {
   display: flex;

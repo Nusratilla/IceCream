@@ -107,8 +107,9 @@ TweenLite.from(".home-leaf:nth-child(1)", 2, {
 });
 // sale-slader
 var swiper = new Swiper(".slide-content", {
-  slidesPerView: 4,
+  slidesPerView: 3,
   spaceBetween: 15,
+  autoplay: true,
   loop: true,
   centerSlide: "true",
   fade: "true",
@@ -131,14 +132,8 @@ var swiper = new Swiper(".slide-content", {
     768: {
       slidesPerView: 3,
     },
-    994: {
+    1024: {
       slidesPerView: 4,
-    },
-    1250: {
-      slidesPerView: 5,
-    },
-    1440: {
-      slidesPerView: 6,
     },
   },
 });
