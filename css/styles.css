@@ -819,8 +819,19 @@ img {
   margin-top: var(--header-height);
 }
 .about-home {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
   width: 100%;
   height: 50%;
+}
+.about-home .about-img {
+  padding: 1rem;
+  z-index: 1;
+}
+.about-title {
+  padding-top: 6rem;
 }
 .about-wrapper {
   position: relative;
@@ -854,4 +865,36 @@ img {
   max-height: 100%;
   border-radius: 1rem;
   box-shadow: var(--box-shadow);
+}
+/* --------------- Service ---------------- */
+.service-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: var(--header-height);
+}
+.service-wrapper .service-title {
+  padding-top: 6rem;
+}
+.service-card-1,
+.service-card-2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+@media (max-width: 868px) {
+  .service-card-1,
+  .service-card-2 {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+  .service-card-1 {
+    flex-direction: column-reverse;
+  }
 }
