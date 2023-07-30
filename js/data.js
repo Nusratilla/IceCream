@@ -12,10 +12,9 @@ const products = [
     image: "s-yeryon.png",
     price: 7.05,
   },
-  // Rolled
   {
     id: 3,
-    name: "Cookies n' Cream",
+    name: "Cookies Cream",
     image: "s-pech.png",
     price: 6.14,
   },
@@ -28,14 +27,51 @@ const products = [
   // Soft Serve
   {
     id: 5,
-    name: "PRODUCT NAME 5",
-    image: "5.PNG",
-    price: 8.22,
+    name: "Cappuccino",
+    image: "t-brown.png",
+    price: 7.22,
   },
   {
     id: 6,
-    name: "PRODUCT NAME 6",
-    image: "6.PNG",
-    price: 12.11,
+    name: "Vanilla",
+    image: "t-oq-choco.png",
+    price: 7.11,
+  },
+  {
+    id: 7,
+    name: "Strawberry",
+    image: "t-pushti.png",
+    price: 7.14,
+  },
+  {
+    id: 8,
+    name: "CapuChoco",
+    image: "t-brown-choco.png",
+    price: 7.58,
+  },
+  // Rolled
+  {
+    id: 9,
+    name: "Kivi",
+    image: "r-yashil.png",
+    price: 6.85,
+  },
+  {
+    id: 10,
+    name: "Strawberry",
+    image: "r-qizil.png",
+    price: 6.77,
+  },
+  {
+    id: 11,
+    name: "Menthol",
+    image: "r-miyata.png",
+    price: 6.59,
+  },
+  {
+    id: 12,
+    name: "Banana",
+    image: "r-maloc.png",
+    price: 6.34,
   },
 ];
