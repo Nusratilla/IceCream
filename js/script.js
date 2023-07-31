@@ -13,6 +13,21 @@ function linkAction() {
 }
 navLink.forEach((l) => l.addEventListener("click", linkAction));
 navClose.addEventListener("click", linkAction);
+// ---------------Mood---------------
+const iconMoon = document.querySelector(".mood-button");
+const darkMode = localStorage.getItem("darkMode");
+
+if (darkMode) document.body.classList.add(darkMode);
+
+iconMoon.addEventListener("click", () => {
+  document.body.classList.toggle("second-mood");
+  // iconMoon.classList.toggle("bi-sun-fill");
+  if (document.body.classList.contains("second-mood")) {
+    localStorage.setItem("darkMode", "second-mood");
+  } else {
+    localStorage.removeItem("darkMode");
+  }
+});
 // ---------------typed animation---------------
 const typed = new Typed(".name-input", {
   strings: ["Ice Cream"],
